@@ -1,0 +1,38 @@
+:root{--bg:#07070a;--bg2:#14080b;--surface:rgba(255,255,255,.05);--line:rgba(255,255,255,.1);--tx:#f5f1f1;--mut:#a79d9f;--p:#ff2a2a;--s:#7a0b12;--glow:rgba(255,42,42,.45);color-scheme:dark}
+:root[data-theme="light"]{--bg:#f6f2f2;--bg2:#ece3e4;--surface:rgba(255,255,255,.75);--line:rgba(0,0,0,.12);--tx:#1a1214;--mut:#6b5f61;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(1000px 600px at 80% -10%,var(--bg2),var(--bg));background-attachment:fixed;color:var(--tx);font-family:'Alexandria','Space Grotesk',system-ui,sans-serif;line-height:1.75}
+html[lang=en] body{font-family:'Space Grotesk','Alexandria',system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}
+.logo{display:flex;align-items:center;gap:10px;direction:ltr;font-size:.8rem}
+.logo .w{font:800 2.6em/1 'Space Grotesk';color:var(--p);text-shadow:0 0 18px var(--glow),2px 2px 0 var(--s);transform:skewX(-8deg);letter-spacing:-.06em}
+.logo .nm{font:700 1em/1 'Space Grotesk';letter-spacing:.34em}
+.logo .nm small{display:block;font-weight:400;letter-spacing:.62em;color:var(--p);margin-top:5px;font-size:.78em}
+.btn{display:inline-block;padding:11px 24px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--p),var(--s));color:#fff;font-weight:600;box-shadow:0 8px 26px var(--glow);transition:.25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:var(--surface);border:1px solid var(--line);box-shadow:none;color:var(--tx)}
+.ib{min-width:38px;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--surface)}
+.ib:hover{border-color:var(--p)}
+.ad{max-width:960px;margin:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 60px}
+.gate{max-width:360px;margin:14vh auto;display:grid;gap:12px;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--surface);backdrop-filter:blur(14px)}
+.ad input,.ad textarea,.ad select{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 13px;color:var(--tx);font:inherit}
+.ad input:focus,.ad textarea:focus,.ad select:focus{outline:none;border-color:var(--p)}
+.ad input[type=checkbox]{width:auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.acts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.stat{padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.stat b{display:block;font:800 1.8rem/1.2 'Space Grotesk';color:var(--p)}.stat span{color:var(--mut);font-size:.85rem}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tabs button{padding:9px 18px;border-radius:99px;border:1px solid var(--line);background:var(--surface)}.tabs button.on{border-color:var(--p);box-shadow:0 0 12px var(--glow)}
+.fm{display:grid;gap:10px;margin-bottom:22px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:var(--surface)}
+.li>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.li button{background:none;border:0;color:var(--p);padding:4px 6px}
+.rimg{height:min(42vw,220px);border-radius:12px}
+.empty{color:var(--mut);padding:26px;text-align:center;border:1px dashed var(--line);border-radius:16px}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--p);color:#fff;padding:10px 20px;border-radius:12px;opacity:0;transition:.3s;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:520px){.stats{grid-template-columns:1fr 1fr 1fr;gap:8px}.stat{padding:10px}.stat b{font-size:1.3rem}}
+.logo .hm{width:40px;height:40px;object-fit:contain;flex:none}
+.verified{color:#2a8bff;font-weight:800}
+.admin-avatar{width:38px;height:38px;border-radius:50%;object-fit:cover}
